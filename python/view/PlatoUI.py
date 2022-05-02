@@ -2,6 +2,10 @@ import sys
 import os
 from PySide2.QtWidgets import (QLineEdit, QPushButton, QApplication,QFileDialog,
     QVBoxLayout, QDialog,QTextEdit,QDoubleSpinBox,QSpinBox)
+from PySide6.QtCore import QObject, Slot
+from PySide6.QtGui import QGuiApplication
+from PySide6.QtQml import QQmlApplicationEngine, QmlElement
+from PySide6.QtQuickControls2 import QQuickStyle
 
 class PlatoUI(QDialog):
 
@@ -30,7 +34,8 @@ class PlatoUI(QDialog):
     def load_work_files(self):
         work_files = self.plato.get_work_files()
         for wf in work_files : 
-            work_file_widget =  QPushButton(wf.get('path'))
+            work_file_widget =  Leaf(wf.path,)
+
             self.layout.addWidget(work_file_widget)
 
 
@@ -42,3 +47,4 @@ class PlatoUI(QDialog):
         else:
             self.log+="<br>"+_message
         self.feedback.setHtml(self.log)
+
