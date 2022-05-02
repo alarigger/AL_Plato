@@ -1,0 +1,10 @@
+{
+    "work_files":[
+        {"path":"a/path1","user":"Canard"},
+        {"path":"a/path2","user":"Canard"},
+        {"path":"a/path3","user":"Canard"},
+        {"path":"a/path4","user":"Canard"},
+        {"path":"a/path5","user":"Canard"},
+        {"path":"a/path6","user":"Canard"}
+    ]
+}
